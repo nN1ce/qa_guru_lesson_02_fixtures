@@ -14,4 +14,4 @@ def test_passed_hw(size_window):
 def test_failed_hw(size_window):
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('Selene - User-oriented').press_enter()
-    browser.element('[id="search"]').should(have.text('Java или Python для QA?'))
+    browser.element('[id="search"]').should(have.no.text('Java или Python для QA?'))
