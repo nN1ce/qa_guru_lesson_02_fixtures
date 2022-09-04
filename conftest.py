@@ -6,6 +6,8 @@ from selene.support.shared import browser
 def size_window():
     browser.config.window_width = 754
     browser.config.window_height = 400
+    yield
+    browser.close()
 
 
 # @pytest.fixture(scope="session", autouse=True)
